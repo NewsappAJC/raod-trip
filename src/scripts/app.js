@@ -1,4 +1,5 @@
 $(document).ready( function() {
+  var currentRoute;
   var w = $("div#map").width(),
       h = 600;
 
@@ -39,8 +40,24 @@ $(document).ready( function() {
       .enter()
       .append("path")
         .attr("d", path)
+        .attr('class', 'ga400')
         .style("stroke", "red")
-        .style("stroke-width", "3px")
+        .style("stroke-width", "0px")
       .on('click', function(){ console.log('click'); });
   };
+
+  d3.select('.route')
+    .on('click', function() {
+      console.log(this.id);
+      showRoute(this.id);
+      d3.event.preventDefault();
+    });
+
+    var showRoute = function(route) {
+      d3.selectAll('.' + currentRoute)
+        .style('stroke-width', '0');
+      d3.selectAll('.' + route)
+        .style('stroke-width', '4px');
+      currentRoute = route;
+    };
 });
