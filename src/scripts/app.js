@@ -74,7 +74,7 @@ $(document).ready( function() {
       .append("path")
         .attr("d", path)
         .attr('class', 'south75')
-        .style("stroke", "#0F808C")
+        .style("stroke", "#F2A71B")
         .style("stroke-width", "0px");
 
     svg.selectAll("east20")
@@ -92,7 +92,7 @@ $(document).ready( function() {
       .append("path")
         .attr("d", path)
         .attr('class', 'west20')
-        .style("stroke", "#F2A71B")
+        .style("stroke", "#0F808C")
         .style("stroke-width", "0px");
   };
 
