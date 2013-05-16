@@ -16,22 +16,26 @@ $(document).ready( function() {
         .attr("width", w)
         .attr("height", h);
 
-  var expway, ga400, south75, east20, west20;
-  d3.json( 'data/expressways.geojson', function(json) {
-    expway = json;
+  var county, expway, ga400, south75, east20, west20;
+  d3.json( 'data/county.geojson', function(json) {
+    county = json;
 
-    d3.json( 'data/GA400.geojson', function(json) {
-      ga400 = json;
+    d3.json( 'data/expressways.geojson', function(json) {
+      expway = json;
 
-      d3.json( 'data/75_south.geojson', function(json) {
-        south75 = json;
+      d3.json( 'data/GA400.geojson', function(json) {
+        ga400 = json;
 
-        d3.json( 'data/east20.geojson', function(json) {
-          east20 = json;
+        d3.json( 'data/75_south.geojson', function(json) {
+          south75 = json;
 
-          d3.json( 'data/west20.geojson', function(json) {
-            west20 = json;
-            drawMap();
+          d3.json( 'data/east20.geojson', function(json) {
+            east20 = json;
+
+            d3.json( 'data/west20.geojson', function(json) {
+              west20 = json;
+              drawMap();
+            });
           });
         });
       });
@@ -39,6 +43,15 @@ $(document).ready( function() {
   });
 
   var drawMap = function() {
+    svg.selectAll("county")
+       .data(county.features)
+       .enter()
+       .append("path")
+         .attr("d", path)
+         .style('stroke', 'white')
+         .style('stroke-width', '3px')
+         .style('fill', '#F2EFE4');
+
     svg.selectAll("expway")
        .data(expway.features)
        .enter()
