@@ -1,12 +1,16 @@
 $(document).ready( function() {
-  var currentRoute;
+  var north = '#D91818',
+      south = '#F2A71B',
+      east  = '#6C8C26',
+      west  = '#0F808C',
+      currentRoute;
   var w = $("div#map").width(),
-      h = 700;
+      h = 650;
 
   var projection = d3.geo.albers()
         .rotate([84.4,0])
         .center([0,33.1])
-        .scale([30000])
+        .scale([28000])
         .translate([w/2,h]);
 
   var path = d3.geo.path().projection(projection);
@@ -50,14 +54,15 @@ $(document).ready( function() {
          .attr("d", path)
          .style('stroke', 'white')
          .style('stroke-width', '3px')
-         .style('fill', '#F2EFE4');
+         .style('fill', '#F2EFF4');
 
     svg.selectAll("expway")
        .data(expway.features)
        .enter()
        .append("path")
          .attr("d", path)
-         .style('stroke', 'grey');
+         .style('stroke', 'lightgrey')
+         .style('stroke-width', '2px');
 
     svg.selectAll("ga400")
       .data(ga400.features)
@@ -65,7 +70,7 @@ $(document).ready( function() {
       .append("path")
         .attr("d", path)
         .attr('class', 'ga400')
-        .style("stroke", "#D91818")
+        .style("stroke", north)
         .style("stroke-width", "0px");
 
     svg.selectAll("south75")
@@ -74,7 +79,7 @@ $(document).ready( function() {
       .append("path")
         .attr("d", path)
         .attr('class', 'south75')
-        .style("stroke", "#F2A71B")
+        .style("stroke", south)
         .style("stroke-width", "0px");
 
     svg.selectAll("east20")
@@ -83,7 +88,7 @@ $(document).ready( function() {
       .append("path")
         .attr("d", path)
         .attr('class', 'east20')
-        .style("stroke", "#6C8C26")
+        .style("stroke", east)
         .style("stroke-width", "0px");
 
     svg.selectAll("west20")
@@ -92,7 +97,7 @@ $(document).ready( function() {
       .append("path")
         .attr("d", path)
         .attr('class', 'west20')
-        .style("stroke", "#0F808C")
+        .style("stroke", west)
         .style("stroke-width", "0px");
   };
 
@@ -104,14 +109,18 @@ $(document).ready( function() {
     })
     .on('mouseover', function() {
       if ( this.id === currentRoute ) {
+        d3.selectAll('.' + this.id)
+          .style('stroke-width', '6px');
         return false;
       }
       d3.selectAll('.' + this.id)
-        .style('stroke-width', '8px')
-        .style('opacity', 0.15);
+        .style('stroke-width', '6px')
+        .style('opacity', 0.35);
     })
     .on('mouseout', function() {
       if ( this.id === currentRoute ) {
+        d3.selectAll('.' + this.id)
+          .style('stroke-width', '3px');
         return false;
       }
       d3.selectAll('.' + this.id)
@@ -121,9 +130,11 @@ $(document).ready( function() {
 
     var showRoute = function(route) {
       d3.selectAll('.' + currentRoute)
+        .transition().duration(750)
         .style('stroke-width', '0');
       d3.selectAll('.' + route)
-        .style('stroke-width', '4px')
+        .transition().duration(1500)
+        .style('stroke-width', '3px')
         .style('opacity', 1);
       currentRoute = route;
     };

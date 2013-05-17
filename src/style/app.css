@@ -1,0 +1,16 @@
+.route-link {
+  margin: 10px;
+  padding: 10px;
+}
+#ga400-container {
+  background-color: #F4BABA;
+}
+#south75-container {
+  background-color: #FBE5BB;
+}
+#east20-container {
+  background-color: #D3DDBE;
+}
+#west20-container {
+  background-color: #B7DDD9;
+}
