@@ -29,19 +29,30 @@
 </head>
 <body>
   <div class="container row">
-    <div id="map" class="six columns alpha"></div>
-    <div id="route-list" class="seven columns omega">
+    <div id="map" class="four columns alpha"></div>
+    <div id="route-list" class="twelve columns omega">
       <h2>Pick a route through the Atlanta metro</h2>
       <a href="" id="ga400" class="route"><div id="ga400-container" class="route-link">Georgia 400 north from I-20 through Forsyth County</div></a>
       <a href="" id="south75" class="route"><div id="south75-container" class="route-link">I-75 south from I-20 through Henry County</div></a>
       <a href="" id="east20" class="route"><div id="east20-container" class="route-link">I-20 east from I-75 through Rockdale County</div></a>
       <a href="" id="west20" class="route"><div id="west20-container" class="route-link">I-20 west from I-75 through Douglas County</div></a>
     </div>
-  </dv>
+  </div>
+  <div class="container row">
+    <div id="chart" class="twelve columns alpha"></div>
+    <div id="info" class="hidden four columns omega">
+      <p><b>Route segment:</b><br/>From <span id="from"></span><br/>To <span id="to"></span></p>
+      <p><b>Greater than 500% of poverty:</b></br> <span id="gt500"></span>%</p>
+      <p><b>200% to 500% of poverty:</b></br> <span id="gt200"></span>%</p>
+      <p><b>100% to 200% of poverty:</b></br> <span id="gt100"></span>%</p>
+      <p><b>Below the poverty level:</b></br> <span id="lt100"></span>%</p>
+    </div>
+  </div>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script src="scripts/lib/underscore-min.js"></script>
 	<script src="scripts/app.js"></script>
+  <script src="scripts/chart.js"></script>
 </body>
 </html>

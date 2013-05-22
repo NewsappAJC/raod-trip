@@ -5,12 +5,12 @@ $(document).ready( function() {
       west  = '#0F808C',
       currentRoute;
   var w = $("div#map").width(),
-      h = 650;
+      h =280;
 
   var projection = d3.geo.albers()
-        .rotate([84.4,0])
-        .center([0,33.1])
-        .scale([28000])
+        .rotate([84.29,0])
+        .center([0,33.16])
+        .scale([12000])
         .translate([w/2,h]);
 
   var path = d3.geo.path().projection(projection);

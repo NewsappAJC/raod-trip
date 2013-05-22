@@ -1,16 +1,46 @@
 .route-link {
-  margin: 10px;
-  padding: 10px;
+  margin: 12px;
+  padding: 15px;
 }
+
 #ga400-container {
   background-color: #F4BABA;
 }
+
 #south75-container {
   background-color: #FBE5BB;
 }
+
 #east20-container {
   background-color: #D3DDBE;
 }
+
 #west20-container {
   background-color: #B7DDD9;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.browser text {
+  text-anchor: end;
+}
+
+.route-line {
+  stroke-width: 0px;
+  opacity: 0;
+}
+
+.selected-route-line {
+  stroke: white;
+  stroke-width: 2px;
+  opacity: 1;
+}
+
+.hidden {
+  visibility: hidden;
 }
