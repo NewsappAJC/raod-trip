@@ -44,3 +44,8 @@
 .hidden {
   visibility: hidden;
 }
+
+.xLabels {
+  font-size: 10px;
+  fill: lightgrey;
+}

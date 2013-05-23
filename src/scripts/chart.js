@@ -55,66 +55,62 @@ $(function(route){
     }));
     window.b = browsers;
 
-    // x.domain(data.map(function(d) { return d.from_loc }));
     xScale.domain(d3.range(data.length));
-    xAxis.tickValues(data.map(function(d) { return d.to_loc }))
+    xAxis.tickValues(data.map(function(d) { return d.to_loc; }));
 
     var browser = svg.selectAll(".browser")
-        .data(browsers)
+      .data(browsers)
       .enter().append("g")
         .attr("class", "browser");
 
     browser.append("path")
-        .attr("class", "area")
-        .attr("d", function(d) { return area(d.values); })
-        .style("fill", function(d) { return color(d.name); })
-        .append("title")
-          .text(function(d) { return d.name; });
+      .attr("class", "area")
+      .attr("d", function(d) { return area(d.values); })
+      .style("fill", function(d) { return color(d.name); })
+      .append("title")
+        .text(function(d) { return d.name; });
 
     // browser.append("text")
-    //     .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
-    //     .attr("transform", function(d) { return "translate(" + xScale(d.value.location) + "," + yScale(d.value.y0 + d.value.y / 2) + ")"; })
-    //     .attr("x", -6)
-    //     .attr("dy", ".35em")
-    //     .text(function(d) { return d.name; });
+    //   .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
+    //   .attr("transform", function(d) { return "translate(" + xScale(d.value.location) + "," + yScale(d.value.y0 + d.value.y / 2) + ")"; })
+    //   .attr("x", -6)
+    //   .attr("dy", ".35em")
+    //   .text(function(d) { return d.name; });
 
     svg.append("g")
-        .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis)
-        .selectAll("text")
-          .style("text-anchor", "end")
-          .style("fill", "lightgrey")
-          .attr("class", "xLabels")
-          .attr("dx", "-.8em")
-          .attr("dy", ".15em")
-          .attr("transform", function(d){ return "rotate(-65)"; })
-          .on("mouseover", function(d,i) {
-            routeData = data[i];
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+      .selectAll("text")
+        .style("text-anchor", "end")
+        .attr("class", "xLabels")
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("transform", function(d){ return "rotate(-65)"; })
+        .on("mouseover", function(d,i) {
+          routeData = data[i];
 
-            $("#from").text(routeData.from_loc);
-            $("#to").text(routeData.to_loc);
-            $("#gt500").text( routeData.gt_500_pct );
-            $("#gt200").text( routeData["200_to_500_pct"] );
-            $("#gt100").text( routeData["100_to_200_pct"] );
-            $("#lt100").text( routeData.below_poverty_pct );
-            $("#info").removeClass("hidden");
+          $("#from").text(routeData.from_loc);
+          $("#to").text(routeData.to_loc);
+          $("#gt500").text( routeData.gt_500_pct );
+          $("#gt200").text( routeData["200_to_500_pct"] );
+          $("#gt100").text( routeData["100_to_200_pct"] );
+          $("#lt100").text( routeData.below_poverty_pct );
+          $("#info").removeClass("hidden");
 
-            d3.select(".selected-route-line").attr("class", "route-line");
-            d3.select('#route-' + i).attr("class", "selected-route-line");
+          d3.select(".selected-route-line").attr("class", "route-line");
+          d3.select('#route-' + i).attr("class", "selected-route-line");
 
-            d3.selectAll(".chartPoint").attr("r", "0px");
-            d3.selectAll(".point-" + i).attr("r", "4px");
+          d3.selectAll(".chartPoint").attr("r", "0px");
+          d3.selectAll(".point-" + i).attr("r", "4px");
 
-            d3.selectAll(".xLabels").style("fill", "lightgrey")
-            d3.select(this).style("fill", "black");
-          });
-          // .on("mouseout", function(d,i) {
-          //   // d3.selectAll(".point-" + i)
-          //   //   .attr("r", "0px");
-          //   d3.select(this)
-          //     .style("fill", "lightgrey");
-          // });
+          d3.selectAll(".mapPoint").attr("opacity", 0);
+          console.log("#mapPoint" + routeData.id);
+          d3.select("#mapPoint" + routeData.id ).attr("opacity", 1);
+
+          d3.selectAll(".xLabels").style("fill", "lightgrey")
+          d3.select(this).style("fill", "black");
+        });
 
     svg.append("g")
         .attr("class", "y axis")

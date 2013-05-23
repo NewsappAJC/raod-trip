@@ -1,0 +1,84 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 201, "properties": { "id": 201, "rtract": "13121000500", "ltract": "13121000500", "descriptio": "14th St NW to I75-I85 split" }, "geometry": { "type": "Point", "coordinates": [ -84.393470092583527, 33.796280904464432 ] } }
+,
+{ "type": "Feature", "id": 202, "properties": { "id": 202, "rtract": "13121009200", "ltract": "13121009200", "descriptio": "Piedmont Rd NE - Norfolk Southern line to Peachtree Creek" }, "geometry": { "type": "Point", "coordinates": [ -84.366683007836727, 33.813578969913642 ] } }
+,
+{ "type": "Feature", "id": 203, "properties": { "id": 203, "rtract": "13121009403", "ltract": "13121009403", "descriptio": "Peachtree Creek to MARTA rail line" }, "geometry": { "type": "Point", "coordinates": [ -84.35947863206593, 33.834505979004184 ] } }
+,
+{ "type": "Feature", "id": 204, "properties": { "id": 204, "rtract": "13121009602", "ltract": "13121009403", "descriptio": "MARTA rail line to Peachtree Rd NE" }, "geometry": { "type": "Point", "coordinates": [ -84.364241456513284, 33.844849777327937 ] } }
+,
+{ "type": "Feature", "id": 205, "properties": { "id": 205, "rtract": "13121010002", "ltract": "13121010001", "descriptio": "Wieuka Rd NE - Peachtree Rd NE to Nancy Creek" }, "geometry": { "type": "Point", "coordinates": [ -84.368968533943317, 33.864092235497353 ] } }
+,
+{ "type": "Feature", "id": 206, "properties": { "id": 206, "rtract": "13121010115", "ltract": "13121010114", "descriptio": "Nancy Creek to Northland Dr NE" }, "geometry": { "type": "Point", "coordinates": [ -84.36453503345453, 33.888672161572494 ] } }
+,
+{ "type": "Feature", "id": 207, "properties": { "id": 207, "rtract": "13121010115", "ltract": "13121010113", "descriptio": "Glennridge Connector - Northland Dr NE to I285" }, "geometry": { "type": "Point", "coordinates": [ -84.359329576015497, 33.903112255810143 ] } }
+,
+{ "type": "Feature", "id": 208, "properties": { "id": 208, "rtract": "13121010110", "ltract": "13121010110", "descriptio": "Hammond Dr NE - I285 to Mt Vernon Hwy NE" }, "geometry": { "type": "Point", "coordinates": [ -84.357820088496524, 33.91899179086316 ] } }
+,
+{ "type": "Feature", "id": 209, "properties": { "id": 209, "rtract": "13121010122", "ltract": "13121201012", "descriptio": "Mt Vernon Hwy NE to Abernathy Rd NE" }, "geometry": { "type": "Point", "coordinates": [ -84.357792707942863, 33.931777641249923 ] } }
+,
+{ "type": "Feature", "id": 210, "properties": { "id": 210, "rtract": "13121101022", "ltract": "13121010123", "descriptio": "North Springs MARTA station - Abernathy Rd NE to Spalding Dr NE" }, "geometry": { "type": "Point", "coordinates": [ -84.357871564802409, 33.945423835765787 ] } }
+,
+{ "type": "Feature", "id": 211, "properties": { "id": 211, "rtract": "13121010122", "ltract": "13121010117", "descriptio": "Spalding Dr NE to Powers Branch of Ball Creek" }, "geometry": { "type": "Point", "coordinates": [ -84.353791235843943, 33.960661495285329 ] } }
+,
+{ "type": "Feature", "id": 212, "properties": { "id": 212, "rtract": "13121101018", "ltract": "13121101018", "descriptio": "Pitts Rd - Powers Branch of Ball Creek to Northridge Rd" }, "geometry": { "type": "Point", "coordinates": [ -84.347763845595296, 33.970139091502091 ] } }
+,
+{ "type": "Feature", "id": 213, "properties": { "id": 213, "rtract": "13121010106", "ltract": "13121010119", "descriptio": "Northridge Rd to Roberts Dr" }, "geometry": { "type": "Point", "coordinates": [ -84.339473383173427, 33.987381890489459 ] } }
+,
+{ "type": "Feature", "id": 214, "properties": { "id": 214, "rtract": "13121010106", "ltract": "13121010120", "descriptio": "Roberts Dr - Roberts Dr to the Chatahoochee River" }, "geometry": { "type": "Point", "coordinates": [ -84.336067571582831, 34.00380389008869 ] } }
+,
+{ "type": "Feature", "id": 215, "properties": { "id": 215, "rtract": "13121o11411", "ltract": "13121011405", "descriptio": "Chatahoochee River to Holcomb Bridge Rd" }, "geometry": { "type": "Point", "coordinates": [ -84.329120460912179, 34.01515748752535 ] } }
+,
+{ "type": "Feature", "id": 216, "properties": { "id": 216, "rtract": "13121011412", "ltract": "13121011420", "descriptio": "Holcomb Bridge Rd to Big Creek" }, "geometry": { "type": "Point", "coordinates": [ -84.319544485797095, 34.028244478364655 ] } }
+,
+{ "type": "Feature", "id": 217, "properties": { "id": 217, "rtract": "13121011611", "ltract": "13121011611", "descriptio": "Mansell Rd - Big Creek to Ahynes Bridge Rd" }, "geometry": { "type": "Point", "coordinates": [ -84.311399332377164, 34.039151104541297 ] } }
+,
+{ "type": "Feature", "id": 218, "properties": { "id": 218, "rtract": "13121011617", "ltract": "13121011616", "descriptio": "Haynes Bridge Rd to Kimball Bridge Rd" }, "geometry": { "type": "Point", "coordinates": [ -84.28100368843495, 34.056644103295369 ] } }
+,
+{ "type": "Feature", "id": 219, "properties": { "id": 219, "rtract": "13121011618", "ltract": "13121011616", "descriptio": "Kimball Bridge Rd to State Bridge Rd" }, "geometry": { "type": "Point", "coordinates": [ -84.273899516216005, 34.06489396282057 ] } }
+,
+{ "type": "Feature", "id": 220, "properties": { "id": 220, "rtract": "13121011619", "ltract": "13121011616", "descriptio": "State Bridge Rd to Webb Bridge Rd" }, "geometry": { "type": "Point", "coordinates": [ -84.270305372004529, 34.071906024603848 ] } }
+,
+{ "type": "Feature", "id": 221, "properties": { "id": 221, "rtract": "13121011621", "ltract": "31121011616", "descriptio": "Webb Bridge Rd to W Windward Pkwy" }, "geometry": { "type": "Point", "coordinates": [ -84.265007149736505, 34.082083995523398 ] } }
+,
+{ "type": "Feature", "id": 222, "properties": { "id": 222, "rtract": "13121011621", "ltract": "13121011614", "descriptio": "Camp Creek - W Windward Pkwy to McGinnis Ferry Rd" }, "geometry": { "type": "Point", "coordinates": [ -84.249881717053952, 34.098602058370034 ] } }
+,
+{ "type": "Feature", "id": 223, "properties": { "id": 223, "rtract": "13117120602", "ltract": "13117120602", "descriptio": "McGinnis Ferry Rd to Union Hill Rd" }, "geometry": { "type": "Point", "coordinates": [ -84.240687886250569, 34.105380426524405 ] } }
+,
+{ "type": "Feature", "id": 224, "properties": { "id": 224, "rtract": "13117130603", "ltract": "13117130603", "descriptio": "McFarland Rd - Union Hill Rd to Shiloh Rd" }, "geometry": { "type": "Point", "coordinates": [ -84.223006792712368, 34.114590542379496 ] } }
+,
+{ "type": "Feature", "id": 225, "properties": { "id": 225, "rtract": "13117130613", "ltract": "13117130601", "descriptio": "Majors Rd - Shiloh Rd to Peachtree Pkwy" }, "geometry": { "type": "Point", "coordinates": [ -84.189282418364556, 34.148955684736606 ] } }
+,
+{ "type": "Feature", "id": 226, "properties": { "id": 226, "rtract": "13117130510", "ltract": "13117130406", "descriptio": "Peachtree Pkwy to Buford Hwy" }, "geometry": { "type": "Point", "coordinates": [ -84.157232760583071, 34.171391056476168 ] } }
+,
+{ "type": "Feature", "id": 227, "properties": { "id": 227, "rtract": "13117130509", "ltract": "13117130410", "descriptio": "Buford Dam Rd - Buford Hwy to Bald Ridge Rd" }, "geometry": { "type": "Point", "coordinates": [ -84.131725310262439, 34.193750944255981 ] } }
+,
+{ "type": "Feature", "id": 228, "properties": { "id": 228, "rtract": "13117130506", "ltract": "13117130409", "descriptio": "Bald Ridge Rd to Pilgrim Mill Rd" }, "geometry": { "type": "Point", "coordinates": [ -84.109852213547939, 34.220451691008215 ] } }
+,
+{ "type": "Feature", "id": 229, "properties": { "id": 229, "rtract": "13117130506", "ltract": "13117130503", "descriptio": "Pilgrim Mill Rd to Keith Bridge Rd" }, "geometry": { "type": "Point", "coordinates": [ -84.097909570469369, 34.239649193457666 ] } }
+,
+{ "type": "Feature", "id": 230, "properties": { "id": 230, "rtract": "13117130101", "ltract": "13117130205", "descriptio": "Settingdown Rd - Keith Bridge Rd to Sttingdown Creek" }, "geometry": { "type": "Point", "coordinates": [ -84.076149537079274, 34.282130659065061 ] } }
+,
+{ "type": "Feature", "id": 231, "properties": { "id": 231, "rtract": "13117130204", "ltract": "13117130204", "descriptio": "End - Settingdown Creek to Forsyth County line" }, "geometry": { "type": "Point", "coordinates": [ -84.05592536942352, 34.334421899312801 ] } }
+,
+{ "type": "Feature", "id": 101, "properties": { "id": 101, "rtract": "13121132000", "ltract": "13121132000", "descriptio": "start -- I20 to Memorial Dr SW" }, "geometry": { "type": "Point", "coordinates": [ -84.390052802720561, 33.74525240774819 ] } }
+,
+{ "type": "Feature", "id": 102, "properties": { "id": 102, "rtract": "13121003500", "ltract": "13121003500", "descriptio": "ML King Jr Dr SE - Memorial Dr SW to the CSX rail line" }, "geometry": { "type": "Point", "coordinates": [ -84.385387431721483, 33.748331214666628 ] } }
+,
+{ "type": "Feature", "id": 104, "properties": { "id": 104, "rtract": "13121002800", "ltract": "13121002800", "descriptio": "Stone Mt Fwy NE - Edgewood Ave SE to Baker St NE" }, "geometry": { "type": "Point", "coordinates": [ -84.379302649608093, 33.758956329287059 ] } }
+,
+{ "type": "Feature", "id": 105, "properties": { "id": 105, "rtract": "13121001800", "ltract": "13121011900", "descriptio": "Baker St NE to Courtland St NE" }, "geometry": { "type": "Point", "coordinates": [ -84.38319301352594, 33.763154733497814 ] } }
+,
+{ "type": "Feature", "id": 106, "properties": { "id": 106, "rtract": "13121001900", "ltract": "13121001900", "descriptio": "W Peachtree St NW -- Courtland St NE to North Ave NW" }, "geometry": { "type": "Point", "coordinates": [ -84.387492281827434, 33.76640157674634 ] } }
+,
+{ "type": "Feature", "id": 107, "properties": { "id": 107, "rtract": "13121001001", "ltract": "13121010002", "descriptio": "5th St NW -- North Ave NW to 10th St NW" }, "geometry": { "type": "Point", "coordinates": [ -84.390985437322399, 33.776881043231235 ] } }
+,
+{ "type": "Feature", "id": 108, "properties": { "id": 108, "rtract": "13121001001", "ltract": "13121001001", "descriptio": "12th St NW -- 10th St NW to 14th St NW" }, "geometry": { "type": "Point", "coordinates": [ -84.391119789456809, 33.784471938826051 ] } }
+,
+{ "type": "Feature", "id": 103, "properties": { "id": 103, "rtract": "13121011900", "ltract": "13121011900", "descriptio": "SE Bell St SE - CSX rail line to Edgewood Ave" }, "geometry": { "type": "Point", "coordinates": [ -84.379666190490298, 33.752467788682871 ] } }
+
+]
+}

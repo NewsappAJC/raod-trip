@@ -20,7 +20,7 @@ $(document).ready( function() {
         .attr("width", w)
         .attr("height", h);
 
-  var county, expway, ga400, south75, east20, west20;
+  var county, expway, ga400, south75, east20, west20, points;
   d3.json( 'data/county.geojson', function(json) {
     county = json;
 
@@ -38,7 +38,12 @@ $(document).ready( function() {
 
             d3.json( 'data/west20.geojson', function(json) {
               west20 = json;
-              drawMap();
+
+              d3.csv( 'data/points.csv', function(data) {
+                points = data;
+                window.p = points;
+                drawMap();
+              });
             });
           });
         });
@@ -99,6 +104,19 @@ $(document).ready( function() {
         .attr('class', 'west20')
         .style("stroke", west)
         .style("stroke-width", "0px");
+
+    svg.selectAll("points")
+      .data(points)
+      .enter()
+      .append("circle")
+        .attr("cx", function(d) { return projection([d.lon, d.lat])[0]; })
+        .attr("cy", function(d) { return projection([d.lon, d.lat])[1]; })
+        .attr("r", "5px")
+        .attr("opacity", 0)
+        .attr("id", function(d) { return "mapPoint" + d.id; })
+        .attr("class", function(d) { return "mapPoint mapPoint-" + d.route; })
+        .style("fill", "black")
+        .style("stroke", "white");
   };
 
   d3.selectAll('.route')
