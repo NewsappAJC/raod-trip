@@ -1,25 +1,32 @@
 $(document).ready( function() {
-  var north = '#D91818',
-      south = '#F2A71B',
-      east  = '#6C8C26',
-      west  = '#0F808C',
-      currentRoute;
-  var w = $("div#map").width(),
-      h =280;
+  var routeColors = {
+        ga400:   '#D91818',
+        south75: '#F2A71B',
+        east20:  '#6C8C26',
+        west20:  '#0F808C'
+      },
+      routeMaps = [],
+      currentRoute = 'ga400';
+
+  var mapConfig = {
+    width: $("div#map").width(),
+    height: 280
+  };
 
   var projection = d3.geo.albers()
         .rotate([84.29,0])
         .center([0,33.16])
         .scale([12000])
-        .translate([w/2,h]);
+        .translate([mapConfig.width/2, mapConfig.height]);
 
   var path = d3.geo.path().projection(projection);
 
-  var svg = d3.select("#map")
+  var map = d3.select("#map")
         .append("svg")
-        .attr("width", w)
-        .attr("height", h);
+        .attr("width", mapConfig.width)
+        .attr("height", mapConfig.height);
 
+  // Read data files
   var county, expway, ga400, south75, east20, west20, points;
   d3.json( 'data/county.geojson', function(json) {
     county = json;
@@ -52,60 +59,66 @@ $(document).ready( function() {
   });
 
   var drawMap = function() {
-    svg.selectAll("county")
-       .data(county.features)
-       .enter()
-       .append("path")
-         .attr("d", path)
-         .style('stroke', 'white')
-         .style('stroke-width', '3px')
-         .style('fill', '#F2EFF4');
+    // Map layer constructor
+    var addMapLayer = function(container, options) {
+      l = container.selectAll(options.name)
+         .data(options.data)
+         .enter()
+         .append("path")
+          .attr("d", path);
 
-    svg.selectAll("expway")
-       .data(expway.features)
-       .enter()
-       .append("path")
-         .attr("d", path)
-         .style('stroke', 'lightgrey')
-         .style('stroke-width', '2px');
+      if ( typeof options.attr !== "undefined" ) {
+        _.each(options.attr, function(attr) {
+          l.attr(attr.name, attr.value);
+        });
+      }
+      if ( typeof options.attr !== "undefined" ) {
+        _.each(options.style, function(style) {
+          l.style(style.name, style.value);
+        });
+      }
+      return l;
+    };
 
-    svg.selectAll("ga400")
-      .data(ga400.features)
-      .enter()
-      .append("path")
-        .attr("d", path)
-        .attr('class', 'ga400')
-        .style("stroke", north)
-        .style("stroke-width", "0px");
+    // Add county layer to map
+    var countyLayer = addMapLayer(map, {
+      name: "county",
+      data: county.features,
+      attr: [{ name: "class", value: "county"}],
+      style: [
+        { name: "stroke", value: "white" },
+        { name: "stroke-width", value: "3px" },
+        { name: "fill", value: "#F2EFF4" }
+      ]
+    });
 
-    svg.selectAll("south75")
-      .data(south75.features)
-      .enter()
-      .append("path")
-        .attr("d", path)
-        .attr('class', 'south75')
-        .style("stroke", south)
-        .style("stroke-width", "0px");
+    // Add expressway layer to map
+   var expwayLayer = addMapLayer(map, {
+     name: "expway",
+     data: expway.features,
+     attr: [{name:"class", value: "expway"}],
+     style: [
+       { name: "stroke", value: "lightgrey" },
+       { name: "stroke-width", value: "2px" }
+     ]
+   });
 
-    svg.selectAll("east20")
-      .data(east20.features)
-      .enter()
-      .append("path")
-        .attr("d", path)
-        .attr('class', 'east20')
-        .style("stroke", east)
-        .style("stroke-width", "0px");
+   // Add route layers to map
+   _.each(["ga400","south75","east20","west20"], function(route) {
+    var data = eval(route);
+    routeMaps[route] = addMapLayer(map, {
+      name: route,
+      data: data.features,
+      attr: [{name: "class", value: route}],
+      style: [
+        {name: "stroke", value: routeColors[route]},
+        {name: "stroke-width", value: "0px"}
+      ]
+    });
+   });
 
-    svg.selectAll("west20")
-      .data(west20.features)
-      .enter()
-      .append("path")
-        .attr("d", path)
-        .attr('class', 'west20')
-        .style("stroke", west)
-        .style("stroke-width", "0px");
-
-    svg.selectAll("points")
+   // Ad point layer to map
+    map.selectAll("points")
       .data(points)
       .enter()
       .append("circle")
@@ -119,11 +132,24 @@ $(document).ready( function() {
         .style("stroke", "white");
   };
 
+  // Show routes in response to mopuse events
+  var showRoute = function(route) {
+    d3.selectAll('.' + currentRoute)
+      .transition().duration(750)
+      .style('stroke-width', '0');
+
+    d3.selectAll('.' + route)
+      .transition().duration(1500)
+      .style('stroke-width', '3px')
+      .style('opacity', 1);
+    currentRoute = route;
+  };
+
+  // Mouse events on route buttons
   d3.selectAll('.route')
     .on('click', function() {
-      console.log(this.id);
-      showRoute(this.id);
       d3.event.preventDefault();
+      showRoute(this.id);
     })
     .on('mouseover', function() {
       if ( this.id === currentRoute ) {
@@ -145,15 +171,4 @@ $(document).ready( function() {
         .style('stroke-width', '0')
         .style('opacity', 1);
     });
-
-    var showRoute = function(route) {
-      d3.selectAll('.' + currentRoute)
-        .transition().duration(750)
-        .style('stroke-width', '0');
-      d3.selectAll('.' + route)
-        .transition().duration(1500)
-        .style('stroke-width', '3px')
-        .style('opacity', 1);
-      currentRoute = route;
-    };
 });
