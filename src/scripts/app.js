@@ -6,8 +6,13 @@ $(document).ready( function() {
         west20:  '#0F808C'
       },
       routeMaps = [],
-      currentRoute = 'ga400';
+      currentRoute = '',
+      route = "",
+      formatPercent = d3.format(".0%"),
+      selectedPoints,
+      redrawChart;
 
+  // Set up map
   var mapConfig = {
     width: $("div#map").width(),
     height: 280
@@ -19,12 +24,48 @@ $(document).ready( function() {
         .scale([12000])
         .translate([mapConfig.width/2, mapConfig.height]);
 
-  var path = d3.geo.path().projection(projection);
+  var mapPath = d3.geo.path().projection(projection);
 
   var map = d3.select("#map")
         .append("svg")
         .attr("width", mapConfig.width)
         .attr("height", mapConfig.height);
+
+  // set up chart
+  var chartConfig = {};
+
+  chartConfig.margins = {top: 5, right: 10, bottom: 175, left: 50};
+  chartConfig.width   = $("#chart").width() - chartConfig.margins.left - chartConfig.margins.right;
+  chartConfig.height  = 450 - chartConfig.margins.top - chartConfig.margins.bottom;
+
+  chartConfig.scales = {
+    x: d3.scale.ordinal().rangePoints([0, chartConfig.width]),
+    y: d3.scale.linear().range([chartConfig.height, 0]).domain([0,1])
+  };
+
+  chartConfig.axis = {
+    x: d3.svg.axis().scale(chartConfig.scales.x).orient("bottom"),
+    y: d3.svg.axis().scale(chartConfig.scales.y).orient("left").tickFormat(formatPercent)
+  };
+
+  chartConfig.colors = d3.scale.category20c();
+  chartConfig.colors.domain(["below_poverty_pct","100_to_200_pct","200_to_500_pct","gt_500_pct"]);
+  titleText = ["Income below poverty","Income 100% to 200% of poverty","Income 200% to 500% of poverty","Income more than 500% of poverty"];
+
+  var chartArea = d3.svg.area()
+      .x(function(d,i) { return chartConfig.scales.x(i); })
+      .y0(function(d)  { return chartConfig.scales.y(d.y0); })
+      .y1(function(d)  { return chartConfig.scales.y(d.y0 + d.y); })
+      .interpolate("cardinal");
+
+  var stackChartData = d3.layout.stack()
+      .values(function(d) { return d.values; });
+
+  var chart = d3.select("#chart").append("svg")
+      .attr("width", chartConfig.width + chartConfig.margins.left + chartConfig.margins.right)
+      .attr("height", chartConfig.height + chartConfig.margins.top + chartConfig.margins.bottom)
+    .append("g")
+      .attr("transform", "translate(" + chartConfig.margins.left + "," + chartConfig.margins.top + ")");
 
   // Read data files
   var county, expway, ga400, south75, east20, west20, points;
@@ -50,6 +91,7 @@ $(document).ready( function() {
                 points = data;
                 window.p = points;
                 drawMap();
+                // drawChart("blank");
               });
             });
           });
@@ -65,7 +107,7 @@ $(document).ready( function() {
          .data(options.data)
          .enter()
          .append("path")
-          .attr("d", path);
+          .attr("d", mapPath);
 
       if ( typeof options.attr !== "undefined" ) {
         _.each(options.attr, function(attr) {
@@ -132,14 +174,121 @@ $(document).ready( function() {
         .style("stroke", "white");
   };
 
-  // Show routes in response to mopuse events
+  /////////////////////////////////////////////////////////////////////////////////
+  var drawChart = function(route) {
+    selectedPoints = _.sortBy(_.where(points, { route: route }));
+
+    var stackedData = stackChartData(chartConfig.colors.domain().map(function(name, i) {
+      return {
+        name: name,
+        titleText: titleText[i],    // Get tooltip text from titleText arry\ay
+        values: selectedPoints.map(function(d, j) {
+          return {x: j, y: d[name] / 100};
+        })
+      };
+    }));
+
+    chartConfig.scales.x.domain(d3.range(selectedPoints.length));
+    chartConfig.axis.x.tickValues(selectedPoints.map(function(d) { return d.to_loc; }));
+
+    var tour = chart.selectAll(".browser")
+      .data(stackedData)
+      .enter().append("g")
+        .attr("class", "browser");
+
+    tour.append("path")
+      .attr("class", "area")
+      .attr("d", function(d) { return chartArea(d.values); })
+      .style("fill", function(d) { return chartConfig.colors(d.name); })
+      .append("title")
+        .text(function(d) { return d.titleText; });
+    window.tour = tour;
+
+    var showChartPoint = function(d,i) {
+      routeData = selectedPoints[i];
+
+      $("#from").text(routeData.from_loc);
+      $("#to").text(routeData.to_loc);
+      $("#gt500").text( routeData.gt_500_pct );
+      $("#gt200").text( routeData["200_to_500_pct"] );
+      $("#gt100").text( routeData["100_to_200_pct"] );
+      $("#lt100").text( routeData.below_poverty_pct );
+      $("#info").removeClass("hidden");
+
+      d3.select(".selected-chart-line").attr("class", "chart-line");
+      d3.select('#route-' + i).attr("class", "selected-chart-line");
+
+      d3.selectAll(".chart-point").attr("r", "0px");
+      d3.selectAll(".point-" + i).attr("r", "4px");
+
+      d3.selectAll(".mapPoint").attr("opacity", 0);
+      d3.select("#mapPoint" + routeData.id ).attr("opacity", 1);
+
+      d3.selectAll(".xLabels").style("fill", "lightgrey");
+      d3.select("#xLabel-" + i).style("fill", "black");
+    };
+
+    chart.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + chartConfig.height + ")")
+      .call(chartConfig.axis.x)
+      .selectAll("text")
+        .style("text-anchor", "end")
+        .attr("class", "xLabels")
+        .attr("id", function(d,i) {return "xLabel-" + i;})
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("transform", function(d){ return "rotate(-65)"; })
+        .on("mouseover", showChartPoint);
+
+    chart.append("g")
+      .attr("class", "y axis")
+      .call(chartConfig.axis.y);
+
+    var lines = chart.selectAll("chart-line")
+      .data(selectedPoints)
+      .enter().append("svg:line")
+        .attr("id", function(d,i) { return 'route-' + i; })
+        .attr("class", "chart-line")
+        .attr("x1", function(d,i) { return chartConfig.scales.x(i); })
+        .attr("x2", function(d,i) { return chartConfig.scales.x(i); })
+        .attr("y1", 0)
+        .attr("y2", chartConfig.height);
+
+    d3.values(stackedData).forEach(function(point) {
+      chart.selectAll("chart-point")
+        .data(point.values)
+        .enter().append("svg:circle")
+          .attr("cx", function(d) { return chartConfig.scales.x(d.x); })
+          .attr("cy", function(d) { return chartConfig.scales.y(d.y0 + d.y); })
+          .attr("r", "0px")
+          .attr("id", function(d) { return point.name + "-" + d.x; })
+          .attr("class", function(d) { return "chart-point point-" + d.x; })
+        .append("text")
+          .text(function(d) { return selectedPoints[d.x][point.name] + "%"; })
+          .attr("x", function(d) { return chartConfig.scales.x(d.x); })
+          .attr("y", function(d) { return chartConfig.scales.y(d.y0 + d.y); });
+    });
+    showChartPoint([],0);
+
+    ///////////////////////////////////////////////////////////////////////////////
+    // redraw chart
+    redrawChart = function(route) {
+      selectedPoints = _.sortBy(_.where(points, { route: route }));
+    };
+  }; // drawChart function
+
+  ////////////////////////////////////////////////////////////////////////////////
+  // Show routes on the map in response to mouse events
   var showRoute = function(route) {
-    d3.selectAll('.' + currentRoute)
-      .transition().duration(750)
-      .style('stroke-width', '0');
+    if (currentRoute !== '') {
+      d3.selectAll('.' + currentRoute)
+        .transition().duration(500)
+        .style('stroke-width', '0');
+    }
 
     d3.selectAll('.' + route)
-      .transition().duration(1500)
+      .transition().delay(500).duration(500)
       .style('stroke-width', '3px')
       .style('opacity', 1);
     currentRoute = route;
@@ -150,6 +299,11 @@ $(document).ready( function() {
     .on('click', function() {
       d3.event.preventDefault();
       showRoute(this.id);
+      if ( typeof selectedPoints === "undefined" ) {
+        drawChart(this.id);
+      } else {
+        redrawChart(this.id);
+      }
     })
     .on('mouseover', function() {
       if ( this.id === currentRoute ) {
@@ -159,7 +313,7 @@ $(document).ready( function() {
       }
       d3.selectAll('.' + this.id)
         .style('stroke-width', '6px')
-        .style('opacity', 0.35);
+        .style('opacity', 0.25);
     })
     .on('mouseout', function() {
       if ( this.id === currentRoute ) {
