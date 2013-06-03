@@ -12,7 +12,7 @@ $(document).ready( function() {
       selectedPoints,
       redrawChart;
 
-  // Set up map
+  // Initial map configuration
   var mapConfig = {
     width: $("div#map").width(),
     height: 280
@@ -31,9 +31,8 @@ $(document).ready( function() {
         .attr("width", mapConfig.width)
         .attr("height", mapConfig.height);
 
-  // set up chart
+  // Initial chart configuration
   var chartConfig = {};
-
   chartConfig.margins = {top: 5, right: 10, bottom: 175, left: 50};
   chartConfig.width   = $("#chart").width() - chartConfig.margins.left - chartConfig.margins.right;
   chartConfig.height  = 450 - chartConfig.margins.top - chartConfig.margins.bottom;
@@ -91,7 +90,7 @@ $(document).ready( function() {
                 points = data;
                 window.p = points;
                 drawMap();
-                // drawChart("blank");
+                drawChart("blank");
               });
             });
           });
@@ -100,6 +99,7 @@ $(document).ready( function() {
     });
   });
 
+  //////////////////////////////////////////////////////////////////////////////////
   var drawMap = function() {
     // Map layer constructor
     var addMapLayer = function(container, options) {
@@ -176,33 +176,50 @@ $(document).ready( function() {
 
   /////////////////////////////////////////////////////////////////////////////////
   var drawChart = function(route) {
-    selectedPoints = _.sortBy(_.where(points, { route: route }));
+    // selectedPoints = _.sortBy(_.where(points, { route: route }), function(d) {
+    //   return d.id;
+    // });
+
+    selectedPoints = selectRoutePoints(route);
+    window.p = selectedPoints;
 
     var stackedData = stackChartData(chartConfig.colors.domain().map(function(name, i) {
       return {
         name: name,
-        titleText: titleText[i],    // Get tooltip text from titleText arry\ay
+        titleText: titleText[i],    // Get tooltip text from titleText array
         values: selectedPoints.map(function(d, j) {
-          return {x: j, y: d[name] / 100};
+          return {x: j, y: d[name] / 100, label: d.to_loc};
         })
       };
     }));
+    window.sd = stackedData;
 
     chartConfig.scales.x.domain(d3.range(selectedPoints.length));
     chartConfig.axis.x.tickValues(selectedPoints.map(function(d) { return d.to_loc; }));
 
+    d3.selectAll(".area").remove();
+    d3.selectAll(".xLabels").remove();
+    d3.selectAll(".x").remove();
+    d3.selectAll(".chart-line").remove();
+    d3.selectAll(".chart-point").remove();
+
     var tour = chart.selectAll(".browser")
-      .data(stackedData)
-      .enter().append("g")
+      .data(stackedData);
+
+    tour.enter().append("g")
         .attr("class", "browser");
 
     tour.append("path")
       .attr("class", "area")
       .attr("d", function(d) { return chartArea(d.values); })
       .style("fill", function(d) { return chartConfig.colors(d.name); })
-      .append("title")
-        .text(function(d) { return d.titleText; });
-    window.tour = tour;
+        .append("title")
+          .text(function(d) { return d.titleText; });
+
+    tourUpdate = d3.transition(tour);
+
+    tourUpdate.transition().select("path").duration(600)
+      .attr("d", function(d) { return chartArea(d.values); });
 
     var showChartPoint = function(d,i) {
       routeData = selectedPoints[i];
@@ -246,37 +263,40 @@ $(document).ready( function() {
       .call(chartConfig.axis.y);
 
     var lines = chart.selectAll("chart-line")
-      .data(selectedPoints)
-      .enter().append("svg:line")
-        .attr("id", function(d,i) { return 'route-' + i; })
-        .attr("class", "chart-line")
-        .attr("x1", function(d,i) { return chartConfig.scales.x(i); })
-        .attr("x2", function(d,i) { return chartConfig.scales.x(i); })
-        .attr("y1", 0)
-        .attr("y2", chartConfig.height);
+      .data(selectedPoints);
 
-    d3.values(stackedData).forEach(function(point) {
-      chart.selectAll("chart-point")
-        .data(point.values)
-        .enter().append("svg:circle")
-          .attr("cx", function(d) { return chartConfig.scales.x(d.x); })
-          .attr("cy", function(d) { return chartConfig.scales.y(d.y0 + d.y); })
-          .attr("r", "0px")
-          .attr("id", function(d) { return point.name + "-" + d.x; })
-          .attr("class", function(d) { return "chart-point point-" + d.x; })
-        .append("text")
-          .text(function(d) { return selectedPoints[d.x][point.name] + "%"; })
-          .attr("x", function(d) { return chartConfig.scales.x(d.x); })
-          .attr("y", function(d) { return chartConfig.scales.y(d.y0 + d.y); });
+    if ( route !== "blank" ) {
+      lines.enter().append("svg:line")
+          .attr("id", function(d,i) { return 'route-' + i; })
+          .attr("class", "chart-line")
+          .attr("x1", function(d,i) { return chartConfig.scales.x(i); })
+          .attr("x2", function(d,i) { return chartConfig.scales.x(i); })
+          .attr("y1", 0)
+          .attr("y2", chartConfig.height);
+
+      d3.values(stackedData).forEach(function(point) {
+        chart.selectAll("chart-point")
+          .data(point.values)
+          .enter().append("svg:circle")
+            .attr("cx", function(d) { return chartConfig.scales.x(d.x); })
+            .attr("cy", function(d) { return chartConfig.scales.y(d.y0 + d.y); })
+            .attr("r", "0px")
+            .attr("id", function(d) { return point.name + "-" + d.x; })
+            .attr("class", function(d) { return "chart-point point-" + d.x; })
+          .append("text")
+            .text(function(d) { return selectedPoints[d.x][point.name] + "%"; })
+            .attr("x", function(d) { return chartConfig.scales.x(d.x); })
+            .attr("y", function(d) { return chartConfig.scales.y(d.y0 + d.y); });
+      });
+      showChartPoint([],0);
+    }
+  };  // drawChart
+
+  function selectRoutePoints(route) {
+    return _.sortBy(_.where(points, { route: route }), function(d) {
+          return d.id;
     });
-    showChartPoint([],0);
-
-    ///////////////////////////////////////////////////////////////////////////////
-    // redraw chart
-    redrawChart = function(route) {
-      selectedPoints = _.sortBy(_.where(points, { route: route }));
-    };
-  }; // drawChart function
+  }
 
   ////////////////////////////////////////////////////////////////////////////////
   // Show routes on the map in response to mouse events
@@ -302,7 +322,7 @@ $(document).ready( function() {
       if ( typeof selectedPoints === "undefined" ) {
         drawChart(this.id);
       } else {
-        redrawChart(this.id);
+        drawChart(this.id);
       }
     })
     .on('mouseover', function() {
