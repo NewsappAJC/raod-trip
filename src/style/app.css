@@ -30,15 +30,20 @@
   text-anchor: end;
 }
 
-.route-line {
+.chart-line {
   stroke-width: 0px;
   opacity: 0;
 }
 
-.selected-route-line {
+.selected-chart-line {
   stroke: white;
   stroke-width: 2px;
   opacity: 1;
+}
+
+.chart-point {
+  fill: black;
+  stroke: white;
 }
 
 .hidden {
