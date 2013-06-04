@@ -88,7 +88,6 @@ $(document).ready( function() {
 
               d3.csv( 'data/points.csv', function(data) {
                 points = data;
-                window.p = points;
                 drawMap();
                 drawChart("blank");
               });
@@ -176,26 +175,22 @@ $(document).ready( function() {
 
   /////////////////////////////////////////////////////////////////////////////////
   var drawChart = function(route) {
-    // selectedPoints = _.sortBy(_.where(points, { route: route }), function(d) {
-    //   return d.id;
-    // });
-
-    selectedPoints = selectRoutePoints(route);
-    window.p = selectedPoints;
+    selectedPoints = _.sortBy(_.where(points, { route: route }), function(d) {
+      return d.id;
+    });
 
     var stackedData = stackChartData(chartConfig.colors.domain().map(function(name, i) {
       return {
         name: name,
         titleText: titleText[i],    // Get tooltip text from titleText array
         values: selectedPoints.map(function(d, j) {
-          return {x: j, y: d[name] / 100, label: d.to_loc};
+          return {x: j, y: d[name] / 100, label: d.to_loc, id: d.id};
         })
       };
     }));
-    window.sd = stackedData;
 
     chartConfig.scales.x.domain(d3.range(selectedPoints.length));
-    chartConfig.axis.x.tickValues(selectedPoints.map(function(d) { return d.to_loc; }));
+    chartConfig.axis.x.tickValues(selectedPoints.map(function(d, i) { return d.to_loc; }));
 
     d3.selectAll(".area").remove();
     d3.selectAll(".xLabels").remove();
@@ -222,7 +217,7 @@ $(document).ready( function() {
       .attr("d", function(d) { return chartArea(d.values); });
 
     var showChartPoint = function(d,i) {
-      routeData = selectedPoints[i];
+      var routeData = selectedPoints[i];
 
       $("#from").text(routeData.from_loc);
       $("#to").text(routeData.to_loc);
@@ -291,12 +286,6 @@ $(document).ready( function() {
       showChartPoint([],0);
     }
   };  // drawChart
-
-  function selectRoutePoints(route) {
-    return _.sortBy(_.where(points, { route: route }), function(d) {
-          return d.id;
-    });
-  }
 
   ////////////////////////////////////////////////////////////////////////////////
   // Show routes on the map in response to mouse events
