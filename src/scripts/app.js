@@ -190,7 +190,7 @@ $(document).ready( function() {
     }));
 
     chartConfig.scales.x.domain(d3.range(selectedPoints.length));
-    chartConfig.axis.x.tickValues(selectedPoints.map(function(d, i) { return d.to_loc; }));
+    chartConfig.axis.x.tickValues(selectedPoints.map(function(d, i) { return ' ' + d.to_loc; }));
 
     d3.selectAll(".area").remove();
     d3.selectAll(".xLabels").remove();
