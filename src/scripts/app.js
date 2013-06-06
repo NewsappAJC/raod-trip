@@ -1,9 +1,10 @@
 $(document).ready( function() {
   var routeColors = {
-        ga400:   '#D91818',
-        south75: '#F2A71B',
-        east20:  '#6C8C26',
-        west20:  '#0F808C'
+        ga400:   ['#BD1515','#E25151','#F5C5C5','#FBE7E7'],
+        south75: ['#F2A71B','#F5BD54','#FBE9C6','#FDF6E8'],
+        east20:  ['#6C8C26','#90A85C','#DAE2C8','#F0F3E9'],
+        west20:  ['#0F808C','#4B9FA8','#C3DFE2','#E7F2F3'],
+        blank:   ['#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF']
       },
       routeMaps = [],
       currentRoute = '',
@@ -47,7 +48,7 @@ $(document).ready( function() {
     y: d3.svg.axis().scale(chartConfig.scales.y).orient("left").tickFormat(formatPercent)
   };
 
-  chartConfig.colors = d3.scale.category20c();
+  chartConfig.colors = d3.scale.ordinal().range(routeColors.blank);
   chartConfig.colors.domain(["below_poverty_pct","100_to_200_pct","200_to_500_pct","gt_500_pct"]);
   titleText = ["Income below poverty","Income 100% to 200% of poverty","Income 200% to 500% of poverty","Income more than 500% of poverty"];
 
@@ -152,7 +153,7 @@ $(document).ready( function() {
       data: data.features,
       attr: [{name: "class", value: route}],
       style: [
-        {name: "stroke", value: routeColors[route]},
+        {name: "stroke", value: routeColors[route][0]},
         {name: "stroke-width", value: "0px"}
       ]
     });
@@ -188,7 +189,7 @@ $(document).ready( function() {
         })
       };
     }));
-
+    chartConfig.colors.range(routeColors[route]);
     chartConfig.scales.x.domain(d3.range(selectedPoints.length));
     chartConfig.axis.x.tickValues(selectedPoints.map(function(d, i) { return ' ' + d.to_loc; }));
 
