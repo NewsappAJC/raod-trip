@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     },
     jshint: {
       files: [
-        'Grintfile.js',
+        'Gruntfile.js',
         'src/scripts/*.js'
       ],
       options: {
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'build/scripts/my_js_file.js'   : ['src/scripts/my_js_file.js']
+          'build/scripts/app.js'   : ['src/scripts/app.js']
         }
       }
     },

@@ -1,4 +1,5 @@
 $(document).ready( function() {
+  var timers = [];
   var routeColors = {
         ga400:   ['#BD1515','#E25151','#F5C5C5','#FBE7E7'],
         south75: ['#F2A71B','#F5BD54','#FBE9C6','#FDF6E8'],
@@ -179,6 +180,7 @@ $(document).ready( function() {
     selectedPoints = _.sortBy(_.where(points, { route: route }), function(d) {
       return d.id;
     });
+    window.sp = selectedPoints;
 
     var stackedData = stackChartData(chartConfig.colors.domain().map(function(name, i) {
       return {
@@ -241,6 +243,18 @@ $(document).ready( function() {
       d3.select("#xLabel-" + i).style("fill", "black");
     };
 
+    function autoTour(i) {
+      _.each(timers, function(t) { clearInterval(t); }); //delete existing timers
+
+      timers.push( setInterval(function() { //add new timer to timers array
+        if ( i === selectedPoints.length ) {
+          i = 0;
+        }
+        showChartPoint([],i);
+        i++;
+      }, 2000));
+    }
+
     chart.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + chartConfig.height + ")")
@@ -252,7 +266,13 @@ $(document).ready( function() {
         .attr("dx", "-.8em")
         .attr("dy", ".15em")
         .attr("transform", function(d){ return "rotate(-65)"; })
-        .on("mouseover", showChartPoint);
+        .on("mouseover", function(d,i) {
+          _.each(timers, function(t) { clearInterval(t); });
+          showChartPoint(d,i);
+        });
+        // .on("mouseout", function(d,i) {
+        //   autoTour(i);
+        // });
 
     chart.append("g")
       .attr("class", "y axis")
@@ -285,6 +305,8 @@ $(document).ready( function() {
             .attr("y", function(d) { return chartConfig.scales.y(d.y0 + d.y); });
       });
       showChartPoint([],0);
+      autoTour(0);
+
     }
   };  // drawChart
 
