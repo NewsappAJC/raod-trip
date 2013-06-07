@@ -7,7 +7,8 @@ module.exports = function(grunt) {
       target: {
         files: [
           { expand: true, flatten: true, src: ['src/scripts/lib/*.js'], dest: 'build/scripts/lib/' },
-          { expand: true, flatten: true, src: ['src/data/*'], dest: 'build/data/' }
+          { expand: true, flatten: true, src: ['src/data/*'], dest: 'build/data/' },
+          { src: ['src/index.html'], dest: 'build/index.html' }
         ]
       }
     },
@@ -92,6 +93,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-s3');
 
-  grunt.registerTask('default', ['copy','uglify','htmlmin','cssmin','s3']);
+  grunt.registerTask('default', ['copy','uglify','cssmin','s3']);
 };
 
