@@ -54,3 +54,10 @@
   font-size: 10px;
   fill: lightgrey;
 }
+
+div.colorBox {
+  height: 15px;
+  width: 15px;
+  float: left;
+  margin: 1px;
+}

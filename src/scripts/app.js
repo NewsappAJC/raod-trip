@@ -304,6 +304,13 @@ $(document).ready( function() {
             .attr("x", function(d) { return chartConfig.scales.x(d.x); })
             .attr("y", function(d) { return chartConfig.scales.y(d.y0 + d.y); });
       });
+
+      // set legend color boxes
+      _.each($(".colorBox"), function(box) {
+        colorIndex = parseInt( /\d$/.exec(box.id)[0] );  // get color array index from colorBox div id
+        $(box).css("background-color", routeColors[route][colorIndex]);
+      });
+
       showChartPoint([],0);
       autoTour(0);
 
