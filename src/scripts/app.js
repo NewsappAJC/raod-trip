@@ -4,7 +4,9 @@ $(document).ready( function() {
         ga400:   ['#BD1515','#E25151','#F5C5C5','#FBE7E7'],
         north75: ['#F2A71B','#F5BD54','#FBE9C6','#FDF6E8'],
         south75: ['#F2A71B','#F5BD54','#FBE9C6','#FDF6E8'],
-        east20:  ['#6C8C26','#90A85C','#DAE2C8','#F0F3E9'],
+        north85: ['#6C8C26','#90A85C','#DAE2C8','#F0F3E9'],
+        south85: ['#6C8C26','#90A85C','#DAE2C8','#F0F3E9'],
+        east20:  ['#0F808C','#4B9FA8','#C3DFE2','#E7F2F3'],
         west20:  ['#0F808C','#4B9FA8','#C3DFE2','#E7F2F3'],
         blank:   ['#FFFFFF','#FFFFFF','#FFFFFF','#FFFFFF']
       },
@@ -18,13 +20,13 @@ $(document).ready( function() {
   // Initial map configuration
   var mapConfig = {
     width: $("div#map").width(),
-    height: 280
+    height: 310
   };
 
   var projection = d3.geo.albers()
-        .rotate([84.29,0])
-        .center([0,33.16])
-        .scale([12000])
+        .rotate([84.4,0])
+        .center([0,33.29])
+        .scale([15000])
         .translate([mapConfig.width/2, mapConfig.height]);
 
   var mapPath = d3.geo.path().projection(projection);
@@ -70,7 +72,7 @@ $(document).ready( function() {
       .attr("transform", "translate(" + chartConfig.margins.left + "," + chartConfig.margins.top + ")");
 
   // Read data files
-  var county, expway, ga400, north75, south75, east20, west20, points;
+  var county, expway, ga400, north75, south75, north85, south85, east20, west20, points;
   d3.json( 'data/county.geojson', function(json) {
     county = json;
 
@@ -92,10 +94,18 @@ $(document).ready( function() {
               d3.json( 'data/north75.geojson', function(json) {
                 north75 = json;
 
-                d3.csv( 'data/points.csv', function(data) {
-                  points = data;
-                  drawMap();
-                  drawChart("blank");
+                d3.json( 'data/south85.geojson', function(json) {
+                  south85 = json;
+
+                  d3.json('data/north85.geojson', function(json) {
+                    north85 = json;
+
+                    d3.csv( 'data/points.csv', function(data) {
+                      points = data;
+                      drawMap();
+                      drawChart("blank");
+                    });
+                  });
                 });
               });
             });
@@ -152,7 +162,8 @@ $(document).ready( function() {
    });
 
    // Add route layers to map
-   _.each(["ga400","north75","south75","east20","west20"], function(route) {
+   _.each(["ga400","north75","south75","north85","south85","east20","west20"], function(route) {
+    console.log(route);
     var data = eval(route);
     routeMaps[route] = addMapLayer(map, {
       name: route,

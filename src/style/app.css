@@ -1,10 +1,11 @@
 .route-link {
-  margin: 12px;
-  padding: 15px;
+  margin: 6px;
+  padding: 12px;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
   -khtml-border-radius: 15px;
   border-radius: 15px;
+  font-weight:  bold;
 }
 
 #ga400-container {
@@ -15,11 +16,11 @@
   background-color: #FBE5BB;
 }
 
-#east20-container {
+.I-85 {
   background-color: #D3DDBE;
 }
 
-#west20-container {
+.I-20 {
   background-color: #B7DDD9;
 }
 
