@@ -1,6 +1,9 @@
 .route-link {
   margin: 12px;
   padding: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -khtml-border-radius: 15px;
   border-radius: 15px;
 }
 
@@ -8,7 +11,7 @@
   background-color: #F4BABA;
 }
 
-#south75-container {
+.I-75{
   background-color: #FBE5BB;
 }
 

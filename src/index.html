@@ -29,18 +29,27 @@
 </head>
 <body>
   <div class="container row">
-    <div id="map" class="four columns alpha"></div>
-    <div id="route-list" class="twelve columns omega">
-      <h2>Pick a route through the Atlanta metro</h2>
+    <h1>Pick a route through the Atlanta metro</h2>
+    <div id="map" class="four columns"></div>
+    <div class="eight columns">
       <a href="" id="ga400" class="route"><div id="ga400-container" class="route-link">Georgia 400 north from I-20 through Forsyth County</div></a>
-      <a href="" id="south75" class="route"><div id="south75-container" class="route-link">I-75 south from I-20 through Henry County</div></a>
+      <a href="" id="north75" class="route"><div id="north75-container" class="route-link I-75">I-75 north from I-20 through Henry County</div></a>
+      <a href="" id="south75" class="route"><div id="south75-container" class="route-link I-75">I-75 south from I-20 through Henry County</div></a>
       <a href="" id="east20" class="route"><div id="east20-container" class="route-link">I-20 east from I-75 through Rockdale County</div></a>
       <a href="" id="west20" class="route"><div id="west20-container" class="route-link">I-20 west from I-75 through Douglas County</div></a>
     </div>
+    <div id="route-list" class="four columns">
+      <hr/>
+      <p>Poverty threshholds vary by family size and the number of children.</p>
+      <p>The poverty threshhold for a family of four with two adults and two children is <b>$23,283</b>.</p>
+      <p>Twice the poverty threshold is <b>$46,566</b>, slightly below the median family income for the Atlanta metro. Families in this category may still be eligible for some public assistance.</p>
+      <p>Five times the poverty threshold is <b>$116,415</b>.</p>
+    </div>
   </div>
   <div class="container row">
-    <div id="chart" class="twelve columns alpha"></div>
-    <div id="info" class="hidden four columns omega">
+    <hr/>
+    <div id="chart" class="twelve columns"></div>
+    <div id="info" class="four columns omega">
       <p><b>From:</b> <span id="from"></span></p>
       <p><b>To:</b> <span id="to"></span></p>
       <hr/>
@@ -48,10 +57,6 @@
       <p><div class="colorBox" id="color2"></div><b>200% to 500% of poverty:</b></br> <span id="gt200"></span>%</p>
       <p><div class="colorBox" id="color1"></div><b>100% to 200% of poverty:</b></br> <span id="gt100"></span>%</p>
       <p><div class="colorBox" id="color0"></div><b>Below the poverty level:</b></br> <span id="lt100"></span>%</p>
-      <hr/>
-      <p>The poverty threshhold for a family of four with two adults and two children is <b>$23,283</b>.</p>
-      <p>Twice the poverty threshold is <b>$46,566</b>, slightly below the median family income for the Atlanta metro. Families in this category may still be eligible for some public assistance.</p>
-      <p>Five times the poverty threshold is <b>$116,415</b>.</p>
     </div>
   </div>
 
