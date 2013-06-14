@@ -1,23 +1,29 @@
-.route-link {
-  margin: 12px;
-  padding: 15px;
+.route-button {
+  margin: 5px;
+  padding: 12px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -khtml-border-radius: 15px;
   border-radius: 15px;
+  font-weight:  bold;
+  color: #FFF;
+  opacity: 0.5;
 }
 
-#ga400-container {
-  background-color: #F4BABA;
+.ga-400 {
+  background-color: #BD1515;
 }
 
-#south75-container {
-  background-color: #FBE5BB;
+.I-75{
+  background-color: #F2A71B;
 }
 
-#east20-container {
-  background-color: #D3DDBE;
+.I-85 {
+  background-color: #6C8C26;
 }
 
-#west20-container {
-  background-color: #B7DDD9;
+.I-20 {
+  background-color: #0F808C;
 }
 
 .axis path,
