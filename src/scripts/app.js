@@ -163,7 +163,6 @@ $(document).ready( function() {
 
    // Add route layers to map
    _.each(["ga400","north75","south75","north85","south85","east20","west20"], function(route) {
-    console.log(route);
     var data = eval(route);
     routeMaps[route] = addMapLayer(map, {
       name: route,
@@ -350,15 +349,14 @@ $(document).ready( function() {
   };
 
   // Mouse events on route buttons
-  d3.selectAll('.route')
+  d3.selectAll('.route-link')
     .on('click', function() {
       d3.event.preventDefault();
       showRoute(this.id);
-      if ( typeof selectedPoints === "undefined" ) {
-        drawChart(this.id);
-      } else {
-        drawChart(this.id);
-      }
+      drawChart(this.id);
+      d3.selectAll('.route-link').style('opacity', 0.5);
+      d3.select('#' + this.id).style('opacity', 1);
+
     })
     .on('mouseover', function() {
       if ( this.id === currentRoute ) {
