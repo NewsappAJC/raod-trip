@@ -62,6 +62,16 @@
   fill: lightgrey;
 }
 
+.xLabels-hoover {
+  font-size: 11px;
+  fill: black;
+}
+
+.xLabels-selected {
+  font-size: 11px;
+  fill: black;
+}
+
 div.colorBox {
   height: 15px;
   width: 15px;

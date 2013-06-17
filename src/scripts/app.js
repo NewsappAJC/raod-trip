@@ -281,13 +281,32 @@ $(document).ready( function() {
         .attr("dx", "-.8em")
         .attr("dy", ".15em")
         .attr("transform", function(d){ return "rotate(-65)"; })
-        .on("mouseover", function(d,i) {
+        .on("click", function(d,i) {
+          d3.selectAll(".xLabels-selected")
+            .attr("class", "xLabels")
+            .style("fill", "lightgrey");
+
+          d3.select("#xLabel-" + i)
+            .attr("class", "xLabels-selected")
+            .style("fill", "black");
+
           _.each(timers, function(t) { clearInterval(t); });
           showChartPoint(d,i);
+        })
+        .on("mouseover", function(d,i) {
+          var label = d3.select('#xLabel-' + i);
+          if ( label.attr("class") !== "xLabels-selected") {
+            label.attr("class", "xLabels-hoover")
+                 .style("fill", "black");
+          }
+        })
+        .on("mouseout", function(d,i) {
+          var label = d3.select("#xLabel-" + i);
+          if ( label.attr("class") !== "xLabels-selected") {
+            label.attr("class", "xLabels")
+                 .style("fill", "lightgrey");
+          }
         });
-        // .on("mouseout", function(d,i) {
-        //   autoTour(i);
-        // });
 
     chart.append("g")
       .attr("class", "y axis")
