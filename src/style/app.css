@@ -1,0 +1,80 @@
+.route-button {
+  margin: 5px;
+  padding: 12px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  border-radius: 15px;
+  font-weight:  bold;
+  color: #FFF;
+  opacity: 0.5;
+}
+
+.ga-400 {
+  background-color: #BD1515;
+}
+
+.I-75{
+  background-color: #F2A71B;
+}
+
+.I-85 {
+  background-color: #6C8C26;
+}
+
+.I-20 {
+  background-color: #0F808C;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.browser text {
+  text-anchor: end;
+}
+
+.chart-line {
+  stroke-width: 0px;
+  opacity: 0;
+}
+
+.selected-chart-line {
+  stroke: white;
+  stroke-width: 2px;
+  opacity: 1;
+}
+
+.chart-point {
+  fill: black;
+  stroke: white;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.xLabels {
+  font-size: 10px;
+  fill: lightgrey;
+}
+
+.xLabels-hoover {
+  font-size: 11px;
+  fill: black;
+}
+
+.xLabels-selected {
+  font-size: 11px;
+  fill: black;
+}
+
+div.colorBox {
+  height: 15px;
+  width: 15px;
+  float: left;
+  margin: 1px;
+}

@@ -1,0 +1,228 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy NW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.489743394962119, 33.763201371618145 ], [ -84.492878480156421, 33.76476763475133 ] ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy NW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.483887051088118, 33.760358061370646 ], [ -84.489743394962119, 33.763201371618145 ] ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy NW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.482636163480635, 33.759960470651841 ], [ -84.482886963320325, 33.759999256843038 ], [ -84.483887051088118, 33.760358061370646 ] ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.521799009110524, 33.765180613561327 ], [ -84.52258392481582, 33.765284540895934 ], [ -84.524340666016229, 33.765678750740435 ], [ -84.52670451579381, 33.766330700937942 ], [ -84.527079868593219, 33.766470992105639 ] ] } }
+,
+{ "type": "Feature", "id": 4, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy NW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.468905217993324, 33.75709558638524 ], [ -84.469352067951917, 33.757326930419836 ] ] } }
+,
+{ "type": "Feature", "id": 5, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy NW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.469352067951917, 33.757326930419836 ], [ -84.470715227858008, 33.757935207435629 ], [ -84.471660192866111, 33.758226379727652 ], [ -84.47290937616161, 33.758486402109646 ] ] } }
+,
+{ "type": "Feature", "id": 6, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.446092274307119, 33.751462339708731 ], [ -84.447064790667028, 33.751635592160639 ], [ -84.447805659186329, 33.751672795657136 ], [ -84.44866361343783, 33.751638088221142 ] ] } }
+,
+{ "type": "Feature", "id": 7, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.444719886890908, 33.750957423723534 ], [ -84.446092274307119, 33.751462339708731 ] ] } }
+,
+{ "type": "Feature", "id": 8, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.444144230765815, 33.750689174853932 ], [ -84.444719886890908, 33.750957423723534 ] ] } }
+,
+{ "type": "Feature", "id": 9, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Ramp", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.391477269970835, 33.745466724153431 ], [ -84.39199142842962, 33.745504926153636 ] ] } }
+,
+{ "type": "Feature", "id": 10, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": null, "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.402395638106626, 33.74334834278654 ], [ -84.403637333403609, 33.742799879704947 ] ] } }
+,
+{ "type": "Feature", "id": 11, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": null, "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.403637333403609, 33.742799879704947 ], [ -84.404745124494411, 33.742176761908027 ], [ -84.405405335573832, 33.741903347401653 ], [ -84.40594774041142, 33.741735189932847 ] ] } }
+,
+{ "type": "Feature", "id": 12, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.41444491683481, 33.741494559027835 ], [ -84.417658506792819, 33.741603754978932 ] ] } }
+,
+{ "type": "Feature", "id": 13, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.408161516930733, 33.741260980774435 ], [ -84.408450435147515, 33.741183253576246 ], [ -84.409396447235011, 33.741173192122446 ], [ -84.410412260749624, 33.741224442566839 ], [ -84.410946921008431, 33.741313473008539 ] ] } }
+,
+{ "type": "Feature", "id": 14, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.410946921008431, 33.741313473008539 ], [ -84.411050750385016, 33.741322256490136 ] ] } }
+,
+{ "type": "Feature", "id": 15, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.53931715323931, 33.769903521673044 ], [ -84.539398230668922, 33.769932851808427 ] ] } }
+,
+{ "type": "Feature", "id": 16, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.538958298694226, 33.769791457069545 ], [ -84.53931715323931, 33.769903521673044 ] ] } }
+,
+{ "type": "Feature", "id": 17, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.537548894709616, 33.769381987243541 ], [ -84.538958298694226, 33.769791457069545 ] ] } }
+,
+{ "type": "Feature", "id": 18, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.532182280933711, 33.767901653470837 ], [ -84.537548894709616, 33.769381987243541 ] ] } }
+,
+{ "type": "Feature", "id": 19, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.530766053350021, 33.767471554783739 ], [ -84.532182280933711, 33.767901653470837 ] ] } }
+,
+{ "type": "Feature", "id": 20, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy NW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.499867105509807, 33.766350564138335 ], [ -84.500078077548309, 33.766369561658429 ] ] } }
+,
+{ "type": "Feature", "id": 21, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.527354393712713, 33.766545512566346 ], [ -84.530766053350021, 33.767471554783739 ] ] } }
+,
+{ "type": "Feature", "id": 22, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.527079868593219, 33.766470992105639 ], [ -84.527354393712713, 33.766545512566346 ] ] } }
+,
+{ "type": "Feature", "id": 23, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": null, "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.493918562053111, 33.765246955514733 ], [ -84.495475831725813, 33.765747066253539 ], [ -84.496632517104615, 33.766033102154239 ], [ -84.498025852234107, 33.76623640889143 ], [ -84.499867105509807, 33.766350564138335 ] ] } }
+,
+{ "type": "Feature", "id": 24, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy NW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.500078077548309, 33.766369561658429 ], [ -84.510841236238107, 33.765526727168037 ] ] } }
+,
+{ "type": "Feature", "id": 25, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy NW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.49309740789792, 33.76486989915513 ], [ -84.493918562053111, 33.765246955514733 ] ] } }
+,
+{ "type": "Feature", "id": 26, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy NW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.492878480156421, 33.76476763475133 ], [ -84.49309740789792, 33.76486989915513 ] ] } }
+,
+{ "type": "Feature", "id": 27, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.510841236238107, 33.765526727168037 ], [ -84.512920571161615, 33.765323079462036 ], [ -84.517959215668526, 33.764990062028538 ], [ -84.519594759240007, 33.765010366275334 ], [ -84.521799009110524, 33.765180613561327 ] ] } }
+,
+{ "type": "Feature", "id": 28, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy NW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.479905501165319, 33.759474295312742 ], [ -84.481481331502408, 33.759688578489744 ], [ -84.482636163480635, 33.759960470651841 ] ] } }
+,
+{ "type": "Feature", "id": 29, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy NW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.473099341878822, 33.758505016824138 ], [ -84.479905501165319, 33.759474295312742 ] ] } }
+,
+{ "type": "Feature", "id": 30, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy NW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.467268561973725, 33.75588043276813 ], [ -84.46791509059932, 33.756405909299438 ], [ -84.468905217993324, 33.75709558638524 ] ] } }
+,
+{ "type": "Feature", "id": 31, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy NW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.466030787529121, 33.754818587574228 ], [ -84.466536303240119, 33.75519021795624 ], [ -84.467268561973725, 33.75588043276813 ] ] } }
+,
+{ "type": "Feature", "id": 32, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.44866361343783, 33.751638088221142 ], [ -84.450289341102732, 33.751328289421842 ], [ -84.452247169289322, 33.750862353137947 ], [ -84.453218206314418, 33.750777633137936 ], [ -84.454658466013527, 33.750848098927939 ], [ -84.455441226940522, 33.751003937477037 ], [ -84.457154975609924, 33.751487449222445 ], [ -84.461755912939623, 33.752833601086436 ], [ -84.463053282427111, 33.753261901492046 ] ] } }
+,
+{ "type": "Feature", "id": 33, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy NW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.463053282427111, 33.753261901492046 ], [ -84.464499238748829, 33.753850395584827 ], [ -84.465287240598428, 33.754303126209827 ], [ -84.466030787529121, 33.754818587574228 ] ] } }
+,
+{ "type": "Feature", "id": 34, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.442692456550617, 33.749622588253047 ], [ -84.443620188879109, 33.750341813127434 ], [ -84.444144230765815, 33.750689174853932 ] ] } }
+,
+{ "type": "Feature", "id": 35, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.442216608744317, 33.749323494397451 ], [ -84.442692456550617, 33.749622588253047 ] ] } }
+,
+{ "type": "Feature", "id": 36, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.438950313447307, 33.747473167023237 ], [ -84.439658547390607, 33.74771455576024 ], [ -84.440424140077511, 33.748101387886443 ], [ -84.441471628762926, 33.74875681539924 ], [ -84.442216608744317, 33.749323494397451 ] ] } }
+,
+{ "type": "Feature", "id": 37, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.430721829092136, 33.746681282823346 ], [ -84.431749673463713, 33.746908089692241 ], [ -84.432520234422313, 33.746982285312036 ], [ -84.434971482021609, 33.746960572735134 ], [ -84.436835521927435, 33.747019666696438 ], [ -84.438040963510716, 33.747219178140234 ], [ -84.438725449936129, 33.747378784967246 ], [ -84.438950313447307, 33.747473167023237 ] ] } }
+,
+{ "type": "Feature", "id": 38, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.43032404186421, 33.746603078168746 ], [ -84.430721829092136, 33.746681282823346 ] ] } }
+,
+{ "type": "Feature", "id": 39, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.393151359322047, 33.745556772130243 ], [ -84.393331035334214, 33.745583960973129 ] ] } }
+,
+{ "type": "Feature", "id": 40, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.393331035334214, 33.745583960973129 ], [ -84.394189918669213, 33.745565044901639 ] ] } }
+,
+{ "type": "Feature", "id": 41, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.394189918669213, 33.745565044901639 ], [ -84.394456334948316, 33.745563806131045 ] ] } }
+,
+{ "type": "Feature", "id": 42, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.39199142842962, 33.745504926153636 ], [ -84.393151359322047, 33.745556772130243 ] ] } }
+,
+{ "type": "Feature", "id": 43, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.390320238867233, 33.745319260211737 ], [ -84.391477269970835, 33.745466724153431 ] ] } }
+,
+{ "type": "Feature", "id": 44, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.390052344987112, 33.745252095365736 ], [ -84.390320238867233, 33.745319260211737 ] ] } }
+,
+{ "type": "Feature", "id": 45, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.394456334948316, 33.745563806131045 ], [ -84.396675016295731, 33.745344179895937 ] ] } }
+,
+{ "type": "Feature", "id": 46, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.396675016295731, 33.745344179895937 ], [ -84.398072090351519, 33.745127656951333 ] ] } }
+,
+{ "type": "Feature", "id": 47, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": null, "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.398072090351519, 33.745127656951333 ], [ -84.398946206110239, 33.744893261227141 ], [ -84.400129366197831, 33.744446710708829 ] ] } }
+,
+{ "type": "Feature", "id": 48, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.426324169247735, 33.744714684071639 ], [ -84.429069180017933, 33.746124622901846 ], [ -84.43032404186421, 33.746603078168746 ] ] } }
+,
+{ "type": "Feature", "id": 49, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": null, "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.400129366197831, 33.744446710708829 ], [ -84.402395638106626, 33.74334834278654 ] ] } }
+,
+{ "type": "Feature", "id": 50, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.421382345200513, 33.742259227547137 ], [ -84.423316830117741, 33.74321541204354 ] ] } }
+,
+{ "type": "Feature", "id": 51, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.423316830117741, 33.74321541204354 ], [ -84.426324169247735, 33.744714684071639 ] ] } }
+,
+{ "type": "Feature", "id": 52, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.420614700424309, 33.741934933033747 ], [ -84.421382345200513, 33.742259227547137 ] ] } }
+,
+{ "type": "Feature", "id": 53, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.417658506792819, 33.741603754978932 ], [ -84.418147016835633, 33.741580494004936 ], [ -84.419240157176716, 33.741660788198438 ], [ -84.420174897479214, 33.741788072942938 ], [ -84.420614700424309, 33.741934933033747 ] ] } }
+,
+{ "type": "Feature", "id": 54, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.40594774041142, 33.741735189932847 ], [ -84.406527023340317, 33.741531892469339 ], [ -84.407225524854425, 33.741368128358744 ] ] } }
+,
+{ "type": "Feature", "id": 55, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.414051116780414, 33.741486306463344 ], [ -84.41444491683481, 33.741494559027835 ] ] } }
+,
+{ "type": "Feature", "id": 56, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.411735833020629, 33.741400352983739 ], [ -84.414051116780414, 33.741486306463344 ] ] } }
+,
+{ "type": "Feature", "id": 57, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.411511466478913, 33.74136122985464 ], [ -84.411735833020629, 33.741400352983739 ] ] } }
+,
+{ "type": "Feature", "id": 58, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.411050750385016, 33.741322256490136 ], [ -84.411511466478913, 33.74136122985464 ] ] } }
+,
+{ "type": "Feature", "id": 59, "properties": { "COUNTY_FIP": "121", "ROAD_NAME": "I-20 Exwy SW", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.407225524854425, 33.741368128358744 ], [ -84.408161516930733, 33.741260980774435 ] ] } }
+,
+{ "type": "Feature", "id": 60, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.905366873810735, 33.725617886945528 ], [ -84.903269658261024, 33.725476492542434 ], [ -84.902141022291531, 33.72533284462164 ], [ -84.900682595924025, 33.725070839112831 ] ] } }
+,
+{ "type": "Feature", "id": 61, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.900682595924025, 33.725070839112831 ], [ -84.895264268663325, 33.724021197149639 ] ] } }
+,
+{ "type": "Feature", "id": 62, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.823469520050111, 33.718121308056027 ], [ -84.821673211084033, 33.718010487479241 ], [ -84.819977851432711, 33.718035031485641 ], [ -84.818572927281735, 33.718173624930628 ], [ -84.810016207030429, 33.719274470005537 ] ] } }
+,
+{ "type": "Feature", "id": 63, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.77683809545691, 33.72355467609313 ], [ -84.76691165853201, 33.727115816890645 ], [ -84.765031370458132, 33.727706035446033 ] ] } }
+,
+{ "type": "Feature", "id": 64, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.73004435599411, 33.737264794242343 ], [ -84.727530738386619, 33.739650698073739 ], [ -84.723550056224326, 33.743577582081635 ] ] } }
+,
+{ "type": "Feature", "id": 65, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.610329278027521, 33.777109703005927 ], [ -84.608279948549509, 33.777135035873236 ], [ -84.605780363223531, 33.777005188058034 ] ] } }
+,
+{ "type": "Feature", "id": 66, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.719775992242333, 33.747290038565637 ], [ -84.719554517616615, 33.747493611255329 ] ] } }
+,
+{ "type": "Feature", "id": 67, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.605580706327331, 33.776988045205634 ], [ -84.602949579173128, 33.776818234834444 ] ] } }
+,
+{ "type": "Feature", "id": 68, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.615014827164913, 33.77644589570572 ], [ -84.613770993315526, 33.776703108258033 ], [ -84.612559161136915, 33.776893591588831 ], [ -84.610329278027521, 33.777109703005927 ] ] } }
+,
+{ "type": "Feature", "id": 69, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.636999304062215, 33.771890044062744 ], [ -84.629147847788232, 33.773566940329239 ], [ -84.615014827164913, 33.77644589570572 ] ] } }
+,
+{ "type": "Feature", "id": 70, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.648873158386507, 33.76943177656603 ], [ -84.636999304062215, 33.771890044062744 ] ] } }
+,
+{ "type": "Feature", "id": 71, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.652070892902614, 33.76875125024474 ], [ -84.648873158386507, 33.76943177656603 ] ] } }
+,
+{ "type": "Feature", "id": 72, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.655133035226214, 33.768136728017431 ], [ -84.652070892902614, 33.76875125024474 ] ] } }
+,
+{ "type": "Feature", "id": 73, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.663352172592212, 33.766104717107346 ], [ -84.658056685788623, 33.767504063008133 ] ] } }
+,
+{ "type": "Feature", "id": 74, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.658056685788623, 33.767504063008133 ], [ -84.655143764551113, 33.768134406384846 ] ] } }
+,
+{ "type": "Feature", "id": 75, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.705609966368712, 33.754084736773436 ], [ -84.702867456744414, 33.754389782195439 ], [ -84.700121844024309, 33.754991302373043 ], [ -84.675537088599725, 33.762435401497548 ] ] } }
+,
+{ "type": "Feature", "id": 76, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.675537088599725, 33.762435401497548 ], [ -84.666837510630032, 33.765018683324243 ], [ -84.663352172592212, 33.766104717107346 ] ] } }
+,
+{ "type": "Feature", "id": 77, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.71107962450543, 33.752963438338732 ], [ -84.709813366652611, 33.753326693499638 ], [ -84.708429377988111, 33.753657790173428 ], [ -84.70754983210513, 33.75382419910094 ], [ -84.705609966368712, 33.754084736773436 ] ] } }
+,
+{ "type": "Feature", "id": 78, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.712564542870311, 33.752397012969446 ], [ -84.71107962450543, 33.752963438338732 ] ] } }
+,
+{ "type": "Feature", "id": 79, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.715931907319316, 33.750626322101034 ], [ -84.713896060074717, 33.75180118686405 ], [ -84.712564542870311, 33.752397012969446 ] ] } }
+,
+{ "type": "Feature", "id": 80, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.719554517616615, 33.747493611255329 ], [ -84.717438243066113, 33.749438825979745 ], [ -84.716357104162213, 33.750250325811344 ], [ -84.715931907319316, 33.750626322101034 ] ] } }
+,
+{ "type": "Feature", "id": 81, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.72097456975682, 33.746122704758548 ], [ -84.719775992242333, 33.747290038565637 ] ] } }
+,
+{ "type": "Feature", "id": 82, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.723550056224326, 33.743577582081635 ], [ -84.72097456975682, 33.746122704758548 ] ] } }
+,
+{ "type": "Feature", "id": 83, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.733057819825632, 33.735117071094642 ], [ -84.730842738339319, 33.736633969143043 ], [ -84.73004435599411, 33.737264794242343 ] ] } }
+,
+{ "type": "Feature", "id": 84, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.737382660266817, 33.732996391642139 ], [ -84.735835677173412, 33.733616926336936 ], [ -84.734748620785908, 33.734121471416437 ], [ -84.733057819825632, 33.735117071094642 ] ] } }
+,
+{ "type": "Feature", "id": 85, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.758105692911116, 33.728886893095044 ], [ -84.743899684050717, 33.731309057042438 ], [ -84.74171789524722, 33.731717561426841 ], [ -84.740012350951332, 33.732104174453838 ], [ -84.738819901010018, 33.73245940101414 ], [ -84.737382660266817, 33.732996391642139 ] ] } }
+,
+{ "type": "Feature", "id": 86, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.762121504867011, 33.728218411197538 ], [ -84.758105692911116, 33.728886893095044 ] ] } }
+,
+{ "type": "Feature", "id": 87, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.765031370458132, 33.727706035446033 ], [ -84.76225239768641, 33.728193353259627 ] ] } }
+,
+{ "type": "Feature", "id": 88, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.911678860127324, 33.724792018628236 ], [ -84.910788683322139, 33.72501480241214 ], [ -84.909421659844028, 33.725282096153435 ], [ -84.907897609905248, 33.725472029765228 ], [ -84.905366873810735, 33.725617886945528 ] ] } }
+,
+{ "type": "Feature", "id": 89, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.810016207030429, 33.719274470005537 ], [ -84.808172472834812, 33.719564805264234 ], [ -84.802795794563124, 33.720733254832943 ], [ -84.797545930270616, 33.721955208842637 ], [ -84.794351960480512, 33.722427167893528 ], [ -84.79301029810982, 33.722504552439645 ] ] } }
+,
+{ "type": "Feature", "id": 90, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.79301029810982, 33.722504552439645 ], [ -84.788702796432233, 33.722689899689534 ], [ -84.781526330444919, 33.722656720740339 ], [ -84.779122734425627, 33.722972150020247 ], [ -84.777589433548414, 33.723320411641645 ], [ -84.77683809545691, 33.72355467609313 ] ] } }
+,
+{ "type": "Feature", "id": 91, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.878492508666724, 33.723092402250835 ], [ -84.871949993287529, 33.723040393653434 ] ] } }
+,
+{ "type": "Feature", "id": 92, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.871949993287529, 33.723040393653434 ], [ -84.868518230111022, 33.722883153077831 ], [ -84.859288788380127, 33.722115069961532 ] ] } }
+,
+{ "type": "Feature", "id": 93, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.895264268663325, 33.724021197149639 ], [ -84.892165226593647, 33.723511576889635 ], [ -84.890425875300224, 33.723319529688844 ], [ -84.888636597275934, 33.723192520172937 ], [ -84.887438039987032, 33.723154037093245 ], [ -84.879121671542919, 33.723107666281336 ] ] } }
+,
+{ "type": "Feature", "id": 94, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.879121671542919, 33.723107666281336 ], [ -84.878492508666724, 33.723092402250835 ] ] } }
+,
+{ "type": "Feature", "id": 95, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.859288788380127, 33.722115069961532 ], [ -84.856918602405415, 33.722094711693735 ] ] } }
+,
+{ "type": "Feature", "id": 96, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.856918602405415, 33.722094711693735 ], [ -84.854096805983531, 33.722131052282229 ], [ -84.85040545879113, 33.722099937628229 ], [ -84.849357678944713, 33.722019314937228 ], [ -84.846504838355926, 33.721605421491539 ], [ -84.844096859644111, 33.721044429029135 ] ] } }
+,
+{ "type": "Feature", "id": 97, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.844096859644111, 33.721044429029135 ], [ -84.840317600234528, 33.720090184161542 ], [ -84.838621767480035, 33.719845758809228 ] ] } }
+,
+{ "type": "Feature", "id": 98, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.838621767480035, 33.719845758809228 ], [ -84.832666976980107, 33.719178651544844 ] ] } }
+,
+{ "type": "Feature", "id": 99, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.832666976980107, 33.719178651544844 ], [ -84.827191216122031, 33.718554591356728 ] ] } }
+,
+{ "type": "Feature", "id": 100, "properties": { "COUNTY_FIP": "097", "ROAD_NAME": "I-20 Exwy", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.827191216122031, 33.718554591356728 ], [ -84.823469520050111, 33.718121308056027 ] ] } }
+,
+{ "type": "Feature", "id": 101, "properties": { "COUNTY_FIP": "067", "ROAD_NAME": null, "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.551950516125117, 33.77294483943173 ], [ -84.546616670632631, 33.771875266118947 ] ] } }
+,
+{ "type": "Feature", "id": 102, "properties": { "COUNTY_FIP": "067", "ROAD_NAME": null, "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.553078907817508, 33.773127828885229 ], [ -84.551950516125117, 33.77294483943173 ] ] } }
+,
+{ "type": "Feature", "id": 103, "properties": { "COUNTY_FIP": "067", "ROAD_NAME": null, "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.560554094995823, 33.77400282360162 ], [ -84.555548384240709, 33.773489540907036 ], [ -84.553078907817508, 33.773127828885229 ] ] } }
+,
+{ "type": "Feature", "id": 104, "properties": { "COUNTY_FIP": "067", "ROAD_NAME": null, "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.60294958055411, 33.776818234875734 ], [ -84.602417217089823, 33.776784791954334 ] ] } }
+,
+{ "type": "Feature", "id": 105, "properties": { "COUNTY_FIP": "067", "ROAD_NAME": null, "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.602417217089823, 33.776784791954334 ], [ -84.578612542784114, 33.775196345822735 ] ] } }
+,
+{ "type": "Feature", "id": 106, "properties": { "COUNTY_FIP": "067", "ROAD_NAME": "I-20", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.578612542784114, 33.775196345822735 ], [ -84.566292529332017, 33.774378217006735 ] ] } }
+,
+{ "type": "Feature", "id": 107, "properties": { "COUNTY_FIP": "067", "ROAD_NAME": null, "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.566292529332017, 33.774378217006735 ], [ -84.561625421991508, 33.774057818352141 ] ] } }
+,
+{ "type": "Feature", "id": 108, "properties": { "COUNTY_FIP": "067", "ROAD_NAME": null, "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.561625421991508, 33.774057818352141 ], [ -84.560554094995823, 33.77400282360162 ] ] } }
+,
+{ "type": "Feature", "id": 109, "properties": { "COUNTY_FIP": "067", "ROAD_NAME": "I-20", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.546616670632631, 33.771875266118947 ], [ -84.54535844713611, 33.771584943233336 ], [ -84.539682069234331, 33.770007144076338 ] ] } }
+,
+{ "type": "Feature", "id": 110, "properties": { "COUNTY_FIP": "067", "ROAD_NAME": "I-20", "Label": "20" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.539682069234331, 33.770007144076338 ], [ -84.539398231497415, 33.769932851833133 ] ] } }
+
+]
+}

@@ -7,13 +7,14 @@ module.exports = function(grunt) {
       target: {
         files: [
           { expand: true, flatten: true, src: ['src/scripts/lib/*.js'], dest: 'build/scripts/lib/' },
-          { expand: true, flatten: true, src: ['src/data/*'], dest: 'build/data/' }
+          { expand: true, flatten: true, src: ['src/data/*'], dest: 'build/data/' },
+          { src: ['src/index.html'], dest: 'build/index.html' }
         ]
       }
     },
     jshint: {
       files: [
-        'Grintfile.js',
+        'Gruntfile.js',
         'src/scripts/*.js'
       ],
       options: {
@@ -21,7 +22,6 @@ module.exports = function(grunt) {
         curly: true,
         eqeqeq: true,
         latedef: true,
-        //quotmark: true,
         undef: true,
         unused: true,
         strict: true,
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          'build/scripts/my_js_file.js'   : ['src/scripts/my_js_file.js']
+          'build/scripts/app.js'   : ['src/scripts/app.js']
         }
       }
     },
@@ -92,6 +92,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-s3');
 
-  grunt.registerTask('default', ['copy','uglify','htmlmin','cssmin','s3']);
+  grunt.registerTask('default', ['copy','uglify','cssmin','s3']);
 };
 
