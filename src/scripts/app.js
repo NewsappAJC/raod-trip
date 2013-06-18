@@ -373,8 +373,6 @@ $(document).ready( function() {
       d3.event.preventDefault();
       showRoute(this.id);
       drawChart(this.id);
-      d3.selectAll('.route-link').style('opacity', 0.5);
-      d3.select('#' + this.id).style('opacity', 1);
 
     })
     .on('mouseover', function() {
