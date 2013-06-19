@@ -15,7 +15,8 @@ $(document).ready( function() {
       route = "",
       formatPercent = d3.format(".0%"),
       selectedPoints,
-      redrawChart;
+      redrawChart,
+      delay = 1500;
 
   // Initial map configuration
   var mapConfig = {
@@ -267,7 +268,7 @@ $(document).ready( function() {
         }
         showChartPoint([],i);
         i++;
-      }, 2000));
+      }, delay));
     }
 
     chart.append("g")
