@@ -255,7 +255,7 @@ $(document).ready( function() {
       d3.selectAll(".mapPoint").attr("opacity", 0);
       d3.select("#mapPoint" + routeData.id ).attr("opacity", 1);
 
-      d3.selectAll(".xLabels").style("fill", "lightgrey");
+      d3.selectAll(".xLabels").style("fill", "grey");
       d3.select("#xLabel-" + i).style("fill", "black");
     };
 
@@ -285,7 +285,7 @@ $(document).ready( function() {
         .on("click", function(d,i) {
           d3.selectAll(".xLabels-selected")
             .attr("class", "xLabels")
-            .style("fill", "lightgrey");
+            .style("fill", "grey");
 
           d3.select("#xLabel-" + i)
             .attr("class", "xLabels-selected")
@@ -305,7 +305,7 @@ $(document).ready( function() {
           var label = d3.select("#xLabel-" + i);
           if ( label.attr("class") !== "xLabels-selected") {
             label.attr("class", "xLabels")
-                 .style("fill", "lightgrey");
+                 .style("fill", "grey");
           }
         });
 
